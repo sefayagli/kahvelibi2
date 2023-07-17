@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Kahve-Lebi</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="kahvelebi.css" rel="stylesheet">
+    <link href="" rel="icon">
+</head>
+
+<body>
+    <!--AnaMenü-->
+    <div class="sefa">
+    <div class="scroll-container2">      
+        <div class="content">
+            <h1>Heading</h1>
+            </div>
+        <img src="menu-2.jpg" alt="Cinque Terre" > 
+
+        <div class="content">
+            <h1>Soğuk İçecekler</h1>
+            </div>
+        <img src="menu-2.jpg" alt="Cinque Terre" > 
+
+        <div class="content">
+            <h1>Sıcak içecekler</h1>
+            </div>
+        <img src="menu-2.jpg" alt="Cinque Terre" > 
+
+        <div class="content">
+            <h1>Heading</h1>
+            </div>
+        <img src="menu-2.jpg" alt="Cinque Terre" > 
+
+        <div class="content">
+            <h1>Heading</h1>
+            </div>
+        <img src="menu-2.jpg" alt="Cinque Terre" > 
+
+        <div class="content">
+            <h1>Heading</h1>
+            </div>
+        <img src="menu-2.jpg" alt="Cinque Terre" > 
+
+        <div class="content">
+            <h1>Heading</h1>
+            </div>
+        <img src="menu-2.jpg" alt="Cinque Terre" > 
+
+        <div class="content">
+            <h1>Heading</h1>
+            </div>
+        <img src="menu-2.jpg" alt="Cinque Terre" > 
+      </div>
+    </div>
+<!--menuliste-->
+<div class="desc"><button onclick="gizleGoster('soguk_icecekler');">Gizle / Göster</button></div>
+<div id="soguk_icecekler" style="display: none;">
+<div class="mainhead">
+    <H2>SOĞUK İÇECEKLER</H2>
+</div>
+
+<div id="soguk_icecekler" >
+
+
+
+<div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="img_5terre.jpg">
+        <img src="menu-2.jpg" alt="Cinque Terre" width="600" height="400">
+      </a>
+      <div class="desc">çay</div>
+    </div>
+  </div>
+  
+  
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="img_mountains.jpg">
+        <img src="menu-2.jpg" alt="Mountains" width="600" height="400">
+      </a>
+      <div class="desc">kahve</div>
+    </div>
+  </div>
+  
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="img_forest.jpg">
+        <img src="menu-2.jpg" alt="Forest" width="600" height="400">
+      </a>
+      <div class="desc">kola</div>
+    </div>
+  </div>
+  
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="img_lights.jpg">
+        <img src="menu-2.jpg" alt="Northern Lights" width="600" height="400">
+      </a>
+      <div class="desc">4</div>
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="img_mountains.jpg">
+        <img src="menu-2.jpg" alt="Mountains" width="600" height="400">
+      </a>
+      <div class="desc">5</div>
+    </div>
+  </div>
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="img_mountains.jpg">
+        <img src="menu-2.jpg" alt="Mountains" width="600" height="400">
+      </a>
+      <div class="desc">6</div>
+    </div>
+  </div>
+  </div>
+
+
+
+  <div class="clearfix"></div>
+
+  <script>
+    function gizleGoster(ID) {
+      var secilenID = document.getElementById(ID);
+      if (secilenID.style.display == "none") {
+        secilenID.style.display = "";
+      } else {
+        secilenID.style.display = "none";
+      }
+    }
+    </script>
+    <script>$(function() {
+
+      //detect if we support scroll snap or not (not the best but should work)
+      var scrollSnap = false;
+      scrollSnap = 'webkitScrollSnapType' in document.documentElement.style;
+      scrollSnap = 'scrollSnapType' in document.documentElement.style;
+    
+      if (scrollSnap === true) {
+        $('#supports').append('<h3 class="success">It looks like your browser does support scroll snap!</h3>');
+      } else {
+        $('#supports').append('<h3 class="failure">It looks like your browser might not support scroll snap properties</h3>');
+      }
+    });</script>
+</body>
