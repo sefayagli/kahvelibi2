@@ -10,6 +10,7 @@
 </head>
 
 <body>
+
     <!--AnaMenü-->
     <div class="sefa">
     <div class="scroll-container2">      
@@ -125,6 +126,14 @@
   <div class="clearfix"></div>
 
   <script>
+    function gizleGoster(ID) {
+      var secilenID = document.getElementById(ID);
+      if (secilenID.style.display == "none") {
+        secilenID.style.display = "";
+      } else {
+        secilenID.style.display = "none";
+      }
+    }
     function gizleGoster(ID) {
       var secilenID = document.getElementById(ID);
       if (secilenID.style.display == "none") {
