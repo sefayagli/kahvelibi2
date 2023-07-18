@@ -24,7 +24,7 @@
             <h1>Soğuk İçecekler</h1></div></a>
         <img src="menu-2.jpg" alt="Cinque Terre" > 
 
-        <a onclick="openCity(event, 'menuName')">
+        <a onclick="openCity(event, 'sıcakIcecek')">
           <div class="content">
               <h1>Sıcak İçecekler</h1></div></a>
           <img src="menu-2.jpg" alt="Cinque Terre" > 
@@ -63,7 +63,7 @@
 <!--menuliste-->
 <!--<div class="desc"><button onclick="gizleGoster('soguk_icecekler');">Gizle / Göster</button></div>
 <div id="soguk_icecekler" style="display: none;">-->
-  <div id="menuName" class="tabcontent">
+  <div id="sogukIcecek" class="tabcontent">
   <div class="mainhead">
     <H2>SOĞUK İÇECEKLER</H2>
 </div>
@@ -72,7 +72,7 @@
       <a target="_blank" href="img_5terre.jpg">
         <img src="menu-2.jpg" alt="Cinque Terre" width="600" height="400">
       </a>
-      <div class="desc">çay</div>
+      <div class="desc">kola</div>
     </div>
   </div>
   
@@ -82,7 +82,7 @@
       <a target="_blank" href="img_mountains.jpg">
         <img src="menu-2.jpg" alt="Mountains" width="600" height="400">
       </a>
-      <div class="desc">kahve</div>
+      <div class="desc">ayran</div>
     </div>
   </div>
   
@@ -91,7 +91,7 @@
       <a target="_blank" href="img_forest.jpg">
         <img src="menu-2.jpg" alt="Forest" width="600" height="400">
       </a>
-      <div class="desc">kola</div>
+      <div class="desc">fanta</div>
     </div>
   </div>
   
@@ -100,27 +100,72 @@
       <a target="_blank" href="img_lights.jpg">
         <img src="menu-2.jpg" alt="Northern Lights" width="600" height="400">
       </a>
-      <div class="desc">4</div>
+      <div class="desc">soğuk kahve</div>
     </div>
   </div>
 
-  <div class="responsive">
-    <div class="gallery">
-      <a target="_blank" href="img_mountains.jpg">
-        <img src="menu-2.jpg" alt="Mountains" width="600" height="400">
-      </a>
-      <div class="desc">5</div>
-    </div>
-  </div>
-  <div class="responsive">
-    <div class="gallery">
-      <a target="_blank" href="img_mountains.jpg">
-        <img src="menu-2.jpg" alt="Mountains" width="600" height="400">
-      </a>
-      <div class="desc">6</div>
-    </div>
-  </div>
+
   </div></div>
+
+
+  <div id="sıcakIcecek" class="tabcontent">
+    <div class="mainhead">
+      <H2>SICAK İÇECEKLER</H2>
+  </div>
+  <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="img_5terre.jpg">
+          <img src="menu-2.jpg" alt="Cinque Terre" width="600" height="400">
+        </a>
+        <div class="desc">çay</div>
+      </div>
+    </div>
+    
+    
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="img_mountains.jpg">
+          <img src="menu-2.jpg" alt="Mountains" width="600" height="400">
+        </a>
+        <div class="desc">kahve</div>
+      </div>
+    </div>
+    
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="img_forest.jpg">
+          <img src="menu-2.jpg" alt="Forest" width="600" height="400">
+        </a>
+        <div class="desc">kola</div>
+      </div>
+    </div>
+    
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="img_lights.jpg">
+          <img src="menu-2.jpg" alt="Northern Lights" width="600" height="400">
+        </a>
+        <div class="desc">4</div>
+      </div>
+    </div>
+  
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="img_mountains.jpg">
+          <img src="menu-2.jpg" alt="Mountains" width="600" height="400">
+        </a>
+        <div class="desc">5</div>
+      </div>
+    </div>
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="img_mountains.jpg">
+          <img src="menu-2.jpg" alt="Mountains" width="600" height="400">
+        </a>
+        <div class="desc">6</div>
+      </div>
+    </div>
+    </div></div>
 
 
 
@@ -150,7 +195,7 @@
     }
     </script>-->
     <script>
-      function openCity(evt, menuName) {
+      function openCity(evt, sogukIcecek) {
         var i, tabcontent, tablinks;
         tabcontent = document.getElementsByClassName("tabcontent");
         for (i = 0; i < tabcontent.length; i++) {
@@ -160,7 +205,7 @@
         for (i = 0; i < tablinks.length; i++) {
           tablinks[i].className = tablinks[i].className.replace(" active", "");
         }
-        document.getElementById(menuName).style.display = "block";
+        document.getElementById(sogukIcecek).style.display = "block";
         evt.currentTarget.className += " active";
       }
       </script>
