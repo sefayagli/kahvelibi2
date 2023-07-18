@@ -19,10 +19,15 @@
             </div>
         <img src="menu-2.jpg" alt="Cinque Terre" > 
 
+      <a onclick="openCity(event, 'sogukIcecek')">
         <div class="content">
-            <h1>Soğuk İçecekler</h1>
-            </div>
+            <h1>Soğuk İçecekler</h1></div></a>
         <img src="menu-2.jpg" alt="Cinque Terre" > 
+
+        <a onclick="openCity(event, 'menuName')">
+          <div class="content">
+              <h1>Sıcak İçecekler</h1></div></a>
+          <img src="menu-2.jpg" alt="Cinque Terre" > 
 
         <div class="content">
             <h1>Sıcak içecekler</h1>
@@ -56,16 +61,12 @@
       </div>
     </div>
 <!--menuliste-->
-<div class="desc"><button onclick="gizleGoster('soguk_icecekler');">Gizle / Göster</button></div>
-<div id="soguk_icecekler" style="display: none;">
-<div class="mainhead">
+<!--<div class="desc"><button onclick="gizleGoster('soguk_icecekler');">Gizle / Göster</button></div>
+<div id="soguk_icecekler" style="display: none;">-->
+  <div id="menuName" class="tabcontent">
+  <div class="mainhead">
     <H2>SOĞUK İÇECEKLER</H2>
 </div>
-
-<div id="soguk_icecekler" >
-
-
-
 <div class="responsive">
     <div class="gallery">
       <a target="_blank" href="img_5terre.jpg">
@@ -119,41 +120,48 @@
       <div class="desc">6</div>
     </div>
   </div>
-  </div>
+  </div></div>
 
 
 
   <div class="clearfix"></div>
 
-  <script>
-    function gizleGoster(ID) {
-      var secilenID = document.getElementById(ID);
-      if (secilenID.style.display == "none") {
-        secilenID.style.display = "";
-      } else {
-        secilenID.style.display = "none";
-      }
-    }
-    function gizleGoster(ID) {
-      var secilenID = document.getElementById(ID);
-      if (secilenID.style.display == "none") {
-        secilenID.style.display = "";
-      } else {
-        secilenID.style.display = "none";
-      }
-    }
-    </script>
-    <script>$(function() {
 
-      //detect if we support scroll snap or not (not the best but should work)
-      var scrollSnap = false;
-      scrollSnap = 'webkitScrollSnapType' in document.documentElement.style;
-      scrollSnap = 'scrollSnapType' in document.documentElement.style;
-    
-      if (scrollSnap === true) {
-        $('#supports').append('<h3 class="success">It looks like your browser does support scroll snap!</h3>');
+    <button class="tablinks" onclick="openCity(event, 'London')">London</button>
+    <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+    <button  onclick="openCity(event, 'menuName')">Tokyo</button>
+ 
+  <!--<script>
+    function gizleGoster(ID) {
+      var secilenID = document.getElementById(ID);
+      if (secilenID.style.display == "none") {
+        secilenID.style.display = "";
       } else {
-        $('#supports').append('<h3 class="failure">It looks like your browser might not support scroll snap properties</h3>');
+        secilenID.style.display = "none";
       }
-    });</script>
+    }
+    function gizleGoster(ID) {
+      var secilenID = document.getElementById(ID);
+      if (secilenID.style.display == "none") {
+        secilenID.style.display = "";
+      } else {
+        secilenID.style.display = "none";
+      }
+    }
+    </script>-->
+    <script>
+      function openCity(evt, menuName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(menuName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+      </script>
 </body>
