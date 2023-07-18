@@ -103,6 +103,8 @@ div.scroll-container2 .content {
 div.gallery {
   background-color: #ffffff;
   box-shadow: 2px 5px 10px rgb(0, 0, 0);
+  min-height: 268px;
+
 }
 
 div.gallery:hover {
@@ -117,14 +119,15 @@ div.gallery img {
 }
 
 div.desc {
-  padding: 15px;
+  padding: 15px 0 15px 5px;
   text-align: left;
   font-size: 1rem;
   text-transform: capitalize;
   display: inline-block;
+  width: 80%;
 }
 div.desc2 {
-  padding: 15px;
+  padding: 15px 5px 0 0;
   float: right;
   font-size: 1rem;
   text-transform: uppercase;
@@ -134,12 +137,19 @@ div.desc2 {
   padding: 6px 6px;
   float: left;
   width: 19.99999%;
+  height: 350px;
 }
 
 @media only screen and (max-width: 700px) {
   .responsive {
     width: 49.99999%;
     margin: 6px 0;
+  }
+  div.desc{
+    font-size: 12px;
+  }
+  div.desc2{
+    font-size: 12px;
   }
 }
 /*
